@@ -128,7 +128,7 @@
 	npm run demo
   ```
 
-3. Go to localhost:3000/materialize
+3. Go to [localhost:3000/materialize](http://localhost:3000/materialize)
 
 
 ## Development
