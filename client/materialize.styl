@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/*
+  Author: ✰ Konstantin Aleksandrov ✰ https://github.com/koalex
+
+  File Structure :
+    1.  Name
+    	1.1. Sub-name
+*/
+
+/************************
+  1. Name
+************************/
+
+/* 1.1  Sub-name */
+.payment-methods
+  min-height 50px
+  text-align center
+  &__item
+    display inline-block
+    margin-right 40px
+    &:last-child
+      margin-right 0
+
+.payment-method-logo
+  display block
+  margin 0 auto
+  height 35px
+
+.preloader
+  display none
+  position absolute
+  top calc(50% - 25px) // for materialize size
+  left calc(50% - 25px) // for materialize size
+  z-index 9999
+
+.delim
+  height 4px
+  background linear-gradient(to left, hotpink, aqua, red, greenyellow)
+
+.money
+  font-size 24px
+  font-weight bold
+
+
+.input-field
+  input.err
+    border-bottom: 1px solid red !important;
+    box-shadow: 0 1px 0 0 red !important;
+    + label
+        color red !important
+      &:after
+        content attr(data-error) !important
+        opacity 1
+        position absolute
+        top 35px
+        font-size .8em
+    &:focus
+      + label:after
+        content none !important
+
+.errorText
+  font-size 20px
+  font-weight bold
+  color red
+  text-align center

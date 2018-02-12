@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lte IE 10]>
+<html class="no-js">
+<![endif]-->
+<!--[if !(IE)]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>Paymentwall test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+    <!--[if IEMobile]>
+        <meta http-equiv="cleartype" content="on">
+    <![endif]-->
+<link rel="apple-touch-icon" sizes="57x57" href="./79589f/79589f.jpgapple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="./79589f/79589f.jpgapple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="./79589f/79589f.jpgapple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="./79589f/79589f.jpgapple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="./79589f/79589f.jpgapple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="./79589f/79589f.jpgapple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="./79589f/79589f.jpgapple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="./79589f/79589f.jpgapple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="./79589f/79589f.jpgapple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="paymentwall-widget"><link rel="icon" type="image/png" sizes="228x228" href="./79589f/79589f.jpgcoast-228x228.png"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="paymentwall-widget"><link rel="icon" type="image/png" sizes="32x32" href="./79589f/79589f.jpgfavicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="./79589f/79589f.jpgfavicon-16x16.png"><link rel="shortcut icon" href="./79589f/79589f.jpgfavicon.ico"><meta name="msapplication-TileColor" content="#fff"><meta name="msapplication-TileImage" content="mstile-144x144.png"><meta name="msapplication-config" content="browserconfig.xml"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="./79589f/79589f.jpgapple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="./79589f/79589f.jpgapple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="./79589f/79589f.jpgapple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="./79589f/79589f.jpgapple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="./79589f/79589f.jpgapple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="./79589f/79589f.jpgapple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="./79589f/79589f.jpgapple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="./79589f/79589f.jpgapple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="./79589f/79589f.jpgapple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="./79589f/79589f.jpgapple-touch-startup-image-1536x2008.png"><link href="./ba530e8a.css" rel="stylesheet"></head>
+<body>
+    <form id="paymentForm">
+        <input type="hidden" name="_csrf" value="#!csrf">
+
+        <div>
+            <h5 id="checkoutWith"></h5>
+            <div id="paymentMethods"></div>
+            <div class="errorText"></div>
+        </div>
+
+        <div>
+            <label>
+                Card Holder Name
+                <input id="cardHolder" type="text" >
+            </label>
+            <div id="cardHolderErrText"></div>
+        </div>
+
+        <div>
+            <label>
+                Credit Card Number
+                <input id="cardNumber" type="text">
+            </label>
+            <div id="cardNumberErrText"></div>
+        </div>
+
+        <div>
+            <select id="expireMonth">
+                <option disabled>Month</option>
+            </select>
+        </div>
+
+        <div>
+            <select id="expireYear">
+                <option disabled>Year</option>
+            </select>
+        </div>
+
+        <div>
+            <label>
+                <input type="text" id="cvv">
+            </label>
+            <div id="cvvErrText"></div>
+        </div>
+
+        <div>
+            <select id="country">
+                <option disabled selected>Country</option>
+            </select>
+        </div>
+
+        <div>
+            <span>PAY:</span>
+            <strong id="amountText"></strong>
+            <em id="currencyText"></em>
+        </div>
+
+        <button type="submit">
+            Confirm payment
+        </button>
+
+        <div id="preloader">Processing...</div>
+    </form>
+<script type="text/javascript" src="./5ca9ceca28e1c438da26.vendor.js"></script><script type="text/javascript" src="./5ca9ceca28e1c438da26.index.js"></script></body>
+</html>

@@ -1,0 +1,11 @@
+dump.rdb
+yarn-error.log
+.nyc_output
+node_modules/
+bower_components/
+.idea/
+errors.log
+stats.json
+.DS_Store
+npm-debug.log
+.bash_history deleted

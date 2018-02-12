@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lte IE 10]>
+<html class="no-js">
+<![endif]-->
+<!--[if !(IE)]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>Paymentwall test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+    <!--[if IEMobile]>
+    <meta http-equiv="cleartype" content="on">
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="57x57" href="./79589f/79589f.jpgapple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="./79589f/79589f.jpgapple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="./79589f/79589f.jpgapple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="./79589f/79589f.jpgapple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="./79589f/79589f.jpgapple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="./79589f/79589f.jpgapple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="./79589f/79589f.jpgapple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="./79589f/79589f.jpgapple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="./79589f/79589f.jpgapple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="paymentwall-widget"><link rel="icon" type="image/png" sizes="228x228" href="./79589f/79589f.jpgcoast-228x228.png"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="paymentwall-widget"><link rel="icon" type="image/png" sizes="32x32" href="./79589f/79589f.jpgfavicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="./79589f/79589f.jpgfavicon-16x16.png"><link rel="shortcut icon" href="./79589f/79589f.jpgfavicon.ico"><meta name="msapplication-TileColor" content="#fff"><meta name="msapplication-TileImage" content="mstile-144x144.png"><meta name="msapplication-config" content="browserconfig.xml"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="./79589f/79589f.jpgapple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="./79589f/79589f.jpgapple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="./79589f/79589f.jpgapple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="./79589f/79589f.jpgapple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="./79589f/79589f.jpgapple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="./79589f/79589f.jpgapple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="./79589f/79589f.jpgapple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="./79589f/79589f.jpgapple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="./79589f/79589f.jpgapple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="./79589f/79589f.jpgapple-touch-startup-image-1536x2008.png"><link href="./ba530e8a.css" rel="stylesheet"><link href="./0773bfce.css" rel="stylesheet"></head>
+<body>
+<div id="wrapper">
+    <div class="row">
+        <form class="col s12" id="paymentForm">
+
+            <div class="row">
+                <h5 id="checkoutWith" class="col s12 center-align"></h5>
+                <div id="paymentMethods" class="payment-methods"></div>
+                <div class="errorText"></div>
+            </div>
+
+            <hr class="delim">
+
+            <input type="hidden" name="_csrf" value="#!csrf">
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="cardHolder" type="text" >
+                    <label for="cardHolder">Card Holder Name</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">credit_card</i>
+                    <input id="cardNumber" type="text">
+                    <label for="cardNumber">Credit Card Number</label>
+                </div>
+
+                <div class="input-field col s8">
+                    <i class="material-icons prefix">date_range</i>
+                    <select id="expireMonth">
+                        <option disabled>Month</option>
+                    </select>
+                    <label>Expiry Date</label>
+                </div>
+
+                <div class="input-field col s4">
+                    <select id="expireYear">
+                        <option disabled>Year</option>
+                    </select>
+                </div>
+
+                <div class="input-field col s5">
+                    <i class="material-icons prefix">security</i>
+                    <input type="text" id="cvv">
+                    <label for="cvv">CVV Number</label>
+                </div>
+
+                <div class="input-field col s7">
+                    <select id="country" class="icons">
+                        <option value="" disabled selected>Country</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 center-align money">
+                    <span>PAY:</span>
+                    <strong id="amountText"></strong>
+                    <em id="currencyText"></em>
+                </div>
+            </div>
+
+            <div class="row">
+                <button type="submit" class="col s12 waves-effect waves-light btn btn-large">
+                    Confirm payment
+
+                    <div id="preloader" class="preloader preloader-wrapper active">
+                        <div class="spinner-layer spinner-green-only">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="./5ca9ceca28e1c438da26.vendor.js"></script><script type="text/javascript" src="./5ca9ceca28e1c438da26.materialize.js"></script></body>
+</html>
