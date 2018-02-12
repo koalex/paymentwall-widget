@@ -94,7 +94,7 @@
 #### Options
 |Name|Required|Description|
 |:--:|:------:|:----------|
-|**api_key**|true|You can get an API key by signing up at paymentwall.com as a merchant and going to [api documentation]: https://api.paymentwall.com/developers/applications . Activate the Evaluation Mode. Signature is optional. By default no country_code parameter is passed (this way geolocated country is used). If the user changes his country - we pull the list of methods for that country.
+|**api_key**|true|You can get an API key by signing up at paymentwall.com as a merchant and going to [api documentation](https://api.paymentwall.com/developers/applications). Activate the Evaluation Mode. Signature is optional. By default no country_code parameter is passed (this way geolocated country is used). If the user changes his country - we pull the list of methods for that country.
 |**amount**|true|Amount the user pays.
 |**currency**|false|Currency (default PLN).
 |**amountText**|true|CSS selector of a element in which you want to display amount.
