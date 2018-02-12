@@ -1,6 +1,8 @@
-# Paymentwall widget
+<h1 align="center">Paymentwall widget</h1>
 
-![Image of widget](https://github.com/koalex/paymentwall-widget/blob/master/paymentwall_widget.jpg)
+<p align="center">
+  <img width="399" height="654" src="https://github.com/koalex/paymentwall-widget/blob/master/paymentwall_widget.jpg">
+</p>
 
 ## Usage
 
