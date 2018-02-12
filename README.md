@@ -1,6 +1,6 @@
 # Paymentwall widget
 
-![Image of widget](https://github.com/koalex/paymentwall-widget/paymentwall_widget.jpg)
+![Image of widget](https://github.com/koalex/paymentwall-widget/blob/master/paymentwall_widget.jpg)
 
 ## Usage
 
