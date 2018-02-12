@@ -1,6 +1,8 @@
 import './widget.styl';
 import 'intl';
+import 'intl/locale-data/jsonp/en.js';
 import 'whatwg-fetch';
+import URLSearchParams from 'url-search-params';
 import Cleave  from 'cleave.js/src/Cleave.js';
 import iso3166 from '../lib/iso-3166-2.json';
 
@@ -271,17 +273,18 @@ export default class Widget {
 
 	async loadPaymentMethods (countryCode) {
 		let url = new URL('https://api.paymentwall.com/api/payment-systems/');
-			url.searchParams.append('key', this.API_KEY);
-			url.searchParams.append('sign_version', 2);
+		let searchParams = new URLSearchParams('');
+			searchParams.append('key', this.API_KEY);
+			searchParams.append('sign_version', 2);
 
-		if (countryCode) url.searchParams.append('country_code', countryCode);
+		if (countryCode) searchParams.append('country_code', countryCode);
 
 
 		this.disableFields();
 		this.clearErrors();
 
 		try {
-			let response = await fetch(url.toString(), {
+			let response = await fetch(url.toString() + '?' + searchParams.toString(), {
 				method: 'GET',
 				mode: 'cors',
 				credentials: 'omit',
