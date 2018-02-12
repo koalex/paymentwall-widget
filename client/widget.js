@@ -1,5 +1,6 @@
 import './widget.styl';
-
+import 'intl';
+import 'whatwg-fetch';
 import Cleave  from 'cleave.js/src/Cleave.js';
 import iso3166 from '../lib/iso-3166-2.json';
 

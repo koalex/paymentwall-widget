@@ -234,7 +234,7 @@ let widgetConfig = Object.assign({}, mainConfig);
 let demoConfig = Object.assign({}, mainConfig);
 
 widgetConfig.entry = {
-	widget: ['./widget.js']
+	widget: ['whatwg-fetch', './widget.js']
 };
 
 widgetConfig.output = {
@@ -248,8 +248,8 @@ widgetConfig.output = {
 
 demoConfig.entry = {
 	vendor: ['./vendor.js'],
-	index: ['./index.js'],
-	materialize: ['./materialize.js']
+	index: ['whatwg-fetch', './index.js'],
+	materialize: ['whatwg-fetch', './materialize.js']
 };
 
 demoConfig.output = {
