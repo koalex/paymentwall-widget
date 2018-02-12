@@ -1,5 +1,7 @@
 # Paymentwall widget
 
+![Image of widget](https://github.com/koalex/paymentwall-widget/paymentwall_widget.jpg)
+
 ## Usage
 
 1. Create basic markup:
