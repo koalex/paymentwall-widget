@@ -1,0 +1,47 @@
+button { outline: none !important; }
+.help-block { white-space: nowrap; }
+.pw-logo {
+    display: inline-block;
+    width: 360px;
+    height: 45px;
+    background-image: url('./icons/paymentwall.svg');
+    background-size: 100% 100%;
+}
+.paymentMethods { min-height: 45px; }
+.paymentMethods img { width: auto; height: 30px; }
+.paymentMethods button { display: inline-block; }
+.countries { min-width: 300px !important; }
+.countries li a {
+    display: flex;
+    justify-content: space-between;
+}
+.user-icon {
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+    background-image: url('./icons/user-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.card {
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+    background-image: url('./icons/default.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.mir { background-image: url('./icons/mir.svg'); }
+.visa { background-image: url('./icons/visa.svg'); }
+.amex { background-image: url('./icons/amex.svg'); }
+.dankort { background-image: url('./icons/dankort.svg'); }
+.diners { background-image: url('./icons/diners.svg'); }
+.discover { background-image: url('./icons/discover.svg'); }
+.instapayment { background-image: url('./icons/instapayment.png'); }
+.jcb { background-image: url('./icons/jcb.svg'); }
+.maestro { background-image: url('./icons/maestro.svg'); }
+.mastercard { background-image: url('./icons/mastercard.svg'); }
+.uatp { background-image: url('./icons/uatp.png'); }
+.unionPay { background-image: url('./icons/unionPay.svg'); }

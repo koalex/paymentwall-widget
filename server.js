@@ -120,11 +120,11 @@ router.get('/', async ctx => {
 	});
 });
 
-router.get('/materialize', async ctx => {
+router.get('/demo', async ctx => {
 	ctx.type = 'html';
 
 	ctx.body = await new Promise((resolve, reject) => {
-		fs.readFile('./dist/materialize.html', (err, html) => {
+		fs.readFile('./dist/index.html', (err, html) => {
 			if (err) return reject(err);
 			resolve(html);
 			// resolve(html.toString('utf-8').replace('#!csrf', ctx.csrf));

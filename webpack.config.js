@@ -14,7 +14,7 @@ const autoprefixer          = require('autoprefixer');
 const cssMqpacker           = require('css-mqpacker');
 
 const mainConfig = {
-	context: path.join(process.cwd(), 'client'),
+	context: path.join(process.cwd(), 'src'),
 
 	watchOptions: {
 		poll: true,
@@ -25,7 +25,7 @@ const mainConfig = {
 	devServer: {
 		port: 4000,
 		hot: __DEV__,
-		contentBase: path.join(__dirname, 'client'),
+		contentBase: path.join(__dirname, 'src'),
 		watchContentBase: true
 	},
 	resolve: {
@@ -49,7 +49,7 @@ const mainConfig = {
 		rules: [
 			{
 				test: /\.jsx?$/,
-				exclude: /node_modules/,
+				exclude: /node_modules|widget/,
 				loader: 'babel-loader',
 				query: {
 					presets: [['env', {'modules': false}], 'stage-0'],
@@ -234,7 +234,7 @@ let widgetConfig = Object.assign({}, mainConfig);
 let demoConfig = Object.assign({}, mainConfig);
 
 widgetConfig.entry = {
-	widget: ['whatwg-fetch', './widget.js']
+	widget: ['./widget.js']
 };
 
 widgetConfig.output = {
@@ -242,14 +242,13 @@ widgetConfig.output = {
 	publicPath: __DEV__ ? '/' : './',
 	library: 'Widget',
 	libraryExport: 'default',
+	libraryTarget: 'umd',
 	filename: '[name].js',
 	chunkFilename: __DEV__ ? '[id].js' : '[id].[chunkhash:8].js'
 };
 
 demoConfig.entry = {
-	vendor: ['./vendor.js'],
-	index: ['whatwg-fetch', './index.js'],
-	materialize: ['whatwg-fetch', './materialize.js']
+	index: ['./index.js']
 };
 
 demoConfig.output = {
@@ -262,7 +261,7 @@ demoConfig.output = {
 demoConfig.plugins = demoConfig.plugins.map(p => p);
 
 demoConfig.plugins.push(new FaviconsWebpackPlugin({
-	logo: path.join(process.cwd(), 'client/logo.jpg'),
+	logo: path.join(process.cwd(), 'src/logo.jpg'),
 	prefix: '[hash:6]/[hash:6].[ext]',
 	inject: true,
 	emitStats: true,
@@ -291,19 +290,10 @@ demoConfig.plugins.push(new FaviconsWebpackPlugin({
 }));
 demoConfig.plugins.push(new HtmlWebpackPlugin({
 		template: 'index.html',
-		chunks: ['vendor', 'index'],
+		chunks: ['index'],
 		filename: 'index.html'
 	})
 );
-demoConfig.plugins.push(new HtmlWebpackPlugin({
-		template: 'materialize.html',
-		chunks: ['vendor', 'materialize'],
-		filename: 'materialize.html'
-	})
-);
-demoConfig.plugins.push(new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' }));
-
-
 
 module.exports = [
 	widgetConfig,
